@@ -8,16 +8,16 @@ package chapter2
 //return pow(distance, 1.0 / r)
 
 import (
-	. "base"
-	"math"
+    . "base"
+    "math"
 )
 
 func Minkowski(rating1, rating2 Ratings, r float64) float64 {
-	var distance float64 = 0
-	for key, value1 := range rating1 {
-		if value2, ok := rating2[key]; ok {
-			distance += math.Pow(math.Abs(value1 - value2), r)
-		}
-	}
-	return math.Pow(distance, 1 / r)
+    var distance float64 = 0
+    for key, value1 := range rating1 {
+        if value2, ok := rating2[key]; ok {
+            distance += math.Pow(math.Abs(value1 - value2), r)
+        }
+    }
+    return math.Pow(distance, 1 / r)
 }
